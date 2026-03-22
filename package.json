@@ -1,0 +1,17 @@
+{
+  "name": "actions-ossutil",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "build": "ncc build main.js -o dist"
+  },
+  "dependencies": {
+    "@actions/core": "^3.0.0",
+    "@actions/exec": "^3.0.0",
+    "@actions/tool-cache": "^4.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.4"
+  }
+}

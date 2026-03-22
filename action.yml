@@ -1,0 +1,23 @@
+# action.yml
+name: "Setup Ossutil"
+description: "Setup aliyun ossutil"
+branding:
+  icon: 'play'  
+  color: 'orange'
+inputs:
+  endpoint:
+    description: "OSS Endpoint https://help.aliyun.com/zh/oss/user-guide/regions-and-endpoints"
+    required: true
+  access-key-id:
+    description: "AccessKeyID"
+    required: true
+  access-key-secret:
+    description: "AccessKeySceret"
+    required: true
+  sts-token:
+    description: "stsToken生成方式参考临时访问凭证 https://help.aliyun.com/zh/oss/developer-reference/use-temporary-access-credentials-provided-by-sts-to-access-oss"
+    required: false
+    default: ""
+runs:
+  using: "node24"
+  main: "dist/main.js"

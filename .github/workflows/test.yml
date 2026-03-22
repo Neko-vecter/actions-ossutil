@@ -1,0 +1,16 @@
+
+name: Setup ossutil
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Neko-vecter/actions-ossutil@main
+      with:
+        endpoint: "oss-cn-qingdao.aliyuncs.com"
+        access-key-id: ${{ secrets.ACCESS_KEY_ID }}
+        access-key-secret: ${{ secrets.ACCESS_KEY_SECRET }}
+    - run: ossutil -h
+    - run: ossutil --version
